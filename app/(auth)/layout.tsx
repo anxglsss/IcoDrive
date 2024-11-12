@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const Layout = () => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<div className='flex min-h-screen'>
 			<section className='xl:w-2/5 lg:flex items-center justify-center bg-brand w-1/2 hidden'>
@@ -28,8 +28,7 @@ const Layout = () => {
 				</div>
 			</section>
 			<section className='bg-white flex flex-1 flex-col p-4 py-10 items-center lg:justify-center lg:p-10 lg:py-0 text-black'>
-				<h1>okmnc[PA</h1>
-				<h1>NPOIEAJNO</h1>
+				{children}
 			</section>
 		</div>
 	)
