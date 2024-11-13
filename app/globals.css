@@ -195,7 +195,7 @@
 
 		/* ActionsDropdown */
 		.rename-input-field {
-			@apply body-2 shad-no-focus h-[52px] w-full rounded-full border px-4 shadow-drop-1 !important;
+			@apply body-2 shad-no-focus h-[52px] w-full rounded-full border px-4 !important;
 		}
 		.delete-confirmation {
 			@apply text-center text-light-100 !important;
@@ -225,7 +225,7 @@
 			@apply !mt-2 space-y-2 !important;
 		}
 		.share-input-field {
-			@apply body-2 shad-no-focus h-[52px] w-full rounded-full border px-4 shadow-drop-1 !important;
+			@apply body-2 shad-no-focus h-[52px] w-full rounded-full border px-4 !important;
 		}
 		.share-remove-user {
 			@apply rounded-full bg-transparent text-light-100 shadow-none hover:bg-transparent !important;
@@ -250,7 +250,7 @@
 
 		/* Card */
 		.file-card {
-			@apply flex cursor-pointer flex-col gap-6 rounded-[18px] bg-white p-5 shadow-sm transition-all hover:shadow-drop-3 !important;
+			@apply flex cursor-pointer flex-col gap-6 rounded-[18px] bg-white p-5 shadow-sm transition-all  !important;
 		}
 		.file-card-details {
 			@apply flex flex-col gap-2 text-light-100 !important;
@@ -341,7 +341,7 @@
 			@apply relative w-full md:max-w-[480px] !important;
 		}
 		.search-input-wrapper {
-			@apply flex h-[52px] flex-1 items-center gap-3 rounded-full px-4 shadow-drop-3 !important;
+			@apply flex h-[52px] flex-1 items-center gap-3 rounded-full px-4 !important;
 		}
 		.search-input {
 			@apply body-2 shad-no-focus  placeholder:body-1 w-full border-none p-0 shadow-none placeholder:text-light-200 !important;
@@ -379,7 +379,7 @@
 			@apply shad-no-focus h-11 w-full rounded-[8px] border-transparent bg-white !shadow-sm sm:w-[210px] !important;
 		}
 		.sort-select-content {
-			@apply !shadow-drop-3 !important;
+			@apply !important;
 		}
 
 		/* Thumbnail */
