@@ -10,6 +10,7 @@ import {
 	FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { createAccount } from '@/lib/actions/user.actions'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,6 +18,7 @@ import { useState } from 'react'
 
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import OTPModal from './OTPModal'
 
 type FormType = 'sign-in' | 'sign-up'
 
@@ -42,8 +44,24 @@ const AuthForm = ({ type }: { type: FormType }) => {
 		},
 	})
 
-	function onSubmit(values: z.infer<typeof formSchema>) {
-		console.log(values)
+	async function onSubmit(values: z.infer<typeof formSchema>) {
+		setIsLoading(true)
+		setErrorMessage('')
+		try {
+			const user =
+				type === 'sign-up'
+					? await createAccount({
+							fullName: values.fullName || '',
+							email: values.email,
+					  })
+					: await signInUser({ email: values.email })
+
+			setAccountId(user.accountId)
+		} catch (error) {
+			setErrorMessage('Error with signing, please try again')
+		} finally {
+			setIsLoading(false)
+		}
 	}
 
 	return (
@@ -133,7 +151,12 @@ const AuthForm = ({ type }: { type: FormType }) => {
 				{errorMessage && <p className='error-message'>*{errorMessage}</p>}
 			</Form>
 
-			{accountId && <h1>OTP Modal Implementation</h1>}
+			{accountId && (
+				<OTPModal
+					email={form.getValues('email')}
+					accountId={accountId}
+				></OTPModal>
+			)}
 		</>
 	)
 }

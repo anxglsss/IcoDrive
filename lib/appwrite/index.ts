@@ -1,9 +1,11 @@
+'use server'
+
 import { cookies } from 'next/headers'
 import { Account, Avatars, Client, Databases, Storage } from 'node-appwrite'
 import { appwriteConfig } from './config'
 
-// SessionClient - client for concrete user
-// AdminCLient - admin with access to all data
+// [SessionClient] - client for concrete user
+// [AdminClient] - admin with access to all data
 
 export async function createSessionClient() {
 	const client = new Client()

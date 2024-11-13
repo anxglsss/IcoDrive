@@ -109,7 +109,7 @@
 			@apply w-full flex gap-1 sm:gap-2 justify-between !important;
 		}
 		.shad-otp-slot {
-			@apply text-[40px] font-medium rounded-xl ring-brand shadow-drop-1 text-brand-100 justify-center flex border-2 border-light-300 size-12 md:size-16 gap-5 !important;
+			@apply text-[40px] font-medium rounded-xl ring-brand text-brand-100 justify-center flex border-2 border-light-300 size-12 md:size-16 gap-4 !important;
 		}
 
 		.shad-sheet {
@@ -281,13 +281,13 @@
 
 		/* FileUploader */
 		.uploader-button {
-			@apply primary-btn h-[52px] gap-2 px-10 shadow-drop-1 !important;
+			@apply primary-btn h-[52px] gap-2 px-10 !important;
 		}
 		.uploader-preview-list {
-			@apply fixed bottom-10 right-10 z-50 flex size-full h-fit max-w-[480px] flex-col gap-3 rounded-[20px] bg-white p-7 shadow-drop-3 !important;
+			@apply fixed bottom-10 right-10 z-50 flex size-full h-fit max-w-[480px] flex-col gap-3 rounded-[20px] bg-white p-7 !important;
 		}
 		.uploader-preview-item {
-			@apply flex items-center justify-between  gap-3 rounded-xl p-3 shadow-drop-3 !important;
+			@apply flex items-center justify-between  gap-3 rounded-xl p-3  !important;
 		}
 		.preview-item-name {
 			@apply subtitle-2 mb-2 line-clamp-1 max-w-[300px] !important;
@@ -371,7 +371,7 @@
 		}
 
 		.shad-active {
-			@apply bg-brand text-white shadow-drop-2 !important;
+			@apply bg-brand text-white !important;
 		}
 
 		/* Sort */
