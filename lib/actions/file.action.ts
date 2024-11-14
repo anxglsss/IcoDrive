@@ -191,14 +191,14 @@ export const deleteFile = async ({
 			fileId
 		)
 
-		if (deletedFile) {
+		if (deletedFile && bucketFileId) {
 			await storage.deleteFile(appwriteConfig.bucketId, bucketFileId)
 		}
 
 		revalidatePath(path)
 		return parseStringify({ status: 'success' })
 	} catch (error) {
-		handleError(error, 'Failed to rename file')
+		handleError(error, 'Failed to delete file')
 	}
 }
 
